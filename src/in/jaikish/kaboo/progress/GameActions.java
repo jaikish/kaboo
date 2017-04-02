@@ -16,6 +16,10 @@ public class GameActions {
 		this.deck = game.getDeck();
 	}
 	
+	public KabooCard showFirstFromDeck(){
+		return deck.getUnSeenCards().remove();
+	}
+	
 	public List<KabooCard> revealTwoCards(Player player){
 		if(player.isHasSeenFirstTwoCards()){
 			return new LinkedList<KabooCard>();
